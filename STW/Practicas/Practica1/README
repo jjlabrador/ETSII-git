@@ -1,0 +1,10 @@
+Practica 1 - Mejorar Rock, Paper, Scissors
+
+- Mejorar ejemplo para que se solicite en un formulario la jugada. (hecho)
+- Mejorar mediante una hoja de estilo la presentacion de los resultados. (hecho, style2.css)
+- ¿Que ocurre si la jugada es erronea? ¿Y si es la cadena vacia?  
+     Si la jugada es erronea se produce una interrupcion y se genera un mensaje de error.
+     Si se introduce un espacio como cadena vacia, no se podra avanzar. Se muestra un mensaje diciendo que el formato es erroneo.
+     Si se envia el campo del formulario vacio (cadena vacia), se produce una excepcion.
+  ¿Se distingue entre mayusculas y minusculas?
+     Usando el metodo 'downcase' nos aseguramos que cualquier entrada se transforme a minusculas.

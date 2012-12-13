@@ -1,0 +1,63 @@
+%center
+  %form{:action => "/", :method => "POST"}
+    %label{:for => "url"}
+    %h4
+      Introduzca la URL a acortar:
+      %input{:type => "text", :name => "url", :id => "url", :accesskey => "s"}
+    %label{:for => "custom_url"}
+    %h4
+      Personalizar abreviatura de URL (opcional)
+      %input{:type => "text", :name => "custom", :id => "custom_url", :accesskey => "t"}
+    %input{:type => "submit", :value => "Shorten", :class => "btn btn-primary"}
+
+- if @short_url.present? && !@short_url.valid?
+  %center
+    %i
+      %h4.invalid Invalid URL: #{@short_url.url}
+      - if !@short_url.custom_url.nil? &&  !@short_url.custom_url.empty?
+        %h4.invalid or invalid custom URL: #{@short_url.custom_url	}
+
+%center
+  %h3
+    %u Extensiones
+  %h4
+    %li
+      %a{:href => "/showall"} URLs abreviadas anteriormente
+    %li
+      %a{:href => "/search_abr"} Buscar URL por abreviación
+    %li  
+      %a{:href => "/search_url"} Buscar abreviación mediante URL
+  
+  %h3
+    %u Visitas por país
+  %h4
+    %table.table-bordered
+      %tr
+        %td
+          %h4 
+            %u País
+        %td
+          %h4 
+            %u Nº Visitas
+      - @paises.each do |p|
+        %tr
+          %td
+            %h4
+              =p
+          %td
+            %h4
+              =Visit.where(:country => "#{p}").count
+    
+    %br  
+    %u Total de visitas: 
+    #{@cont}
+  
+  %h4
+    %li
+      %u Su ip:  
+      =@ip['ip']
+    %li
+      %u País: 
+      =@ip['countryName']
+      ="(#{@ip['countryAbbrev']})"
+  

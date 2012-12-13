@@ -1,0 +1,9 @@
+Práctica 5 - Servicio para Abreviar URLs Teniendo en Cuenta el País de Visita
+
+Añádale a la práctica 4 la funcionalidad de mostrar el número de visitas y el número de visitas por país.
+
+Puede usar para ello la API de http://www.hostip.info/
+
+- XMLSimple le puede ayudar a parsear el XML: http://xml-simple.rubyforge.org/
+- https://github.com/sausheong/tinyclone
+- Véase la API de http://www.hostip.info/

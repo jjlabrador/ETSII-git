@@ -1,0 +1,17 @@
+%center
+  %h3 
+    %u.quiet Resultado de la abreviación
+  
+  %h4
+    %p
+      %b URL original: 
+      #{params[:url]}
+    %p
+      %b URL acortada:
+      - if !@short_url.custom_url.nil? && @short_url.custom_url.length > 0
+        %a{:href => "/#{@short_url.id}"} http://#{@short_url.custom_url}
+      - else
+        %a{:href => "/#{@short_url.id}"} http://#{@short_url.id.to_s(36)}
+  
+  %h4
+    %a{:href => "/", :class => "btn btn-primary"} New Shorten

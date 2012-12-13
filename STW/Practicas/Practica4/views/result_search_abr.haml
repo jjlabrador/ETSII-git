@@ -1,0 +1,13 @@
+%center
+  %h3 
+    %u.quiet Resultado de la búsqueda de URL
+
+  %h4
+    %a{:href => "#{u.id}"} http://#{params[:abr]} 
+    \=>
+    = u.url
+
+  %br
+  %h3
+    %a{:href => "/search_abr", :class => "btn btn-primary"} Nueva Búsqueda
+    %a{:href => "/", :class => "btn btn-primary"} Regresar

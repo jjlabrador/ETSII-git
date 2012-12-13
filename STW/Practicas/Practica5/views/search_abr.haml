@@ -1,0 +1,12 @@
+%center
+  %h3 
+    %u.quiet Buscar URL por abreviación
+    
+  %form{:action => "/search_abr", :method => "POST"}
+    %h4
+      Introduzca la abreviación:
+      %input{:type => "text", :name => "abr"}
+      %input{:type => "submit", :value => "Buscar", :class => "btn btn-small"}
+
+  %h3
+    %a{:href => "/", :class => "btn btn-primary"} Regresar

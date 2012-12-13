@@ -1,0 +1,14 @@
+development:
+  adapter: sqlite3
+  encoding: utf8
+  database: shortened_urls_dev.sqlite
+
+test:
+  adapter: sqlite3
+  encoding: utf8
+  database: shortened_urls_test.sqlite
+
+production:
+  adapter: sqlite3
+  encoding: utf8
+  database: shortened_urls_live.sqlite

@@ -1,0 +1,15 @@
+Práctica 4 - Servicio para Abreviar URLs
+
+Escriba un acortador de URLs usando ActiveRecords y sinatra-activerecord Asegúrese de tener instalados:
+
+  1. gem install activerecord
+  2. gem install sinatra-activerecord
+  3. gem install sqlite3
+
+Puede ir añadiendo extensiones a la práctica:
+
+  1. Añada una opción para mostrar la lista de URLs abreviadas
+  2. Añada una opción para buscar por una abreviación y mostrar la URL
+  3. Añada una opción para buscar por una URL y mostrar la abreviación
+  4. Añada una opción que permita una abreviación personalizada, siempre que esté libre. 
+  Por ejemplo, abreviar http://www.sinatrarb.com/documentation a http://localhost:4567/sindoc

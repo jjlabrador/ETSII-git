@@ -1,0 +1,19 @@
+%center
+  %table{:border => "3"}
+    %tr
+      %td
+        %h3
+          Computer chooses: #{@computer_throw}
+          %p
+            %img{:src => "/images/#{@computer_throw}.jpg", :alt => "#{@computer_throw}", :height => "168", :weight => "400"}
+      %td
+        %h3
+          You choose: #{@player_throw}
+          %p
+            %img{:src => "/images/#{@player_throw}.jpg", :alt => "#{@player_throw}", :height => "168", :weight => "400"}
+  %p
+    %h3
+      %font{:color => "red"}
+        Result: #{@answer}
+  %h2
+    %a{:href => "/"} Try again!

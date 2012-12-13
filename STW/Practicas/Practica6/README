@@ -1,0 +1,7 @@
+Práctica 6 - Chat con mensajes individuales
+
+Mejore el chat utilizando streaming y server sent events descrito en la sección 2.9.3 para que:
+
+- Si el usuario escribe en su caja "/nickname: mensaje" ese mensaje sólo se entregue al usuario nickname.
+
+Sección 2.9.3: http://nereida.deioc.ull.es/~stw/perlexamples/node22.html#subsectionpractica:chat

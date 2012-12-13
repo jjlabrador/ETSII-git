@@ -1,0 +1,15 @@
+%center
+  %h3 
+    %u.quiet Resultado de la búsqueda de abreviación
+
+  %h4
+    #{params[:ur]} => 
+    - if !v.custom_url.nil? && v.custom_url.length > 0
+      %a{:href => "/#{v.id}"} http://#{v.custom_url}
+    - else
+      %a{:href => "/#{v.id}"} http://#{v.id}
+
+  %br
+  %h3
+    %a{:href => "/search_url", :class => "btn btn-primary"} Nueva Búsqueda
+    %a{:href => "/", :class => "btn btn-primary"} Regresar

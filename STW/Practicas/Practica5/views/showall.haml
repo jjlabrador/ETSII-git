@@ -1,0 +1,30 @@
+%center
+  %h3
+    %u.quiet URLs abreviadas anteriormente
+
+  %table.table-bordered
+    %tr
+      %td
+        %h4 Nº
+      %td
+        %h4 URL
+      %td
+        %h4 URL acortada
+    - k.each do|c|
+      %tr
+        %td
+          %h4
+            = "#{c.id})"
+        %td
+          %h4
+            = c.url
+        %td
+          %h4 
+            - if !c.custom_url.nil? && c.custom_url.length > 0
+              %a{:href => "/#{c.id}"} http://#{c.custom_url}
+            - else
+              %a{:href => "/#{c.id}"} http://#{c.id}
+            
+  %br
+  %h4
+    %a{:href => "/", :class => "btn btn-primary"} Regresar

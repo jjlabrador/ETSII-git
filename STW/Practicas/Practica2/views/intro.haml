@@ -1,0 +1,28 @@
+%center
+  %form{:name => "input", :action => "/throw", :method => "get", }
+    Your play:
+    %input{:type => "text", :name => "play", :pattern => "[^\\s]{1,}", :title => "Empty string doesn't allow!"}
+    %input{:type => "submit", :value => "Accept"}
+  %h1
+    %u
+      Score:
+  %p
+  %table{:border => "3"}
+    %tr
+      %td
+        %font{:size => "6", :color => "green"}
+          Wins: #{session[:wins]}
+    %tr
+      %td
+        %font{:size => "6", :color => "red"}
+          Defeats: #{session[:defeats]}
+    %tr
+      %td
+        %font{:size => "6", :color => "orange"}
+          Ties: #{session[:ties]}
+    %tr
+      %td
+        %font{:size => "6", :color => "blue"}
+          Total: #{session[:total]}
+  %h1
+    %a{:href => "/logout"} Reset
