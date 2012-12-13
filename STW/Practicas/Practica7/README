@@ -1,0 +1,8 @@
+Práctica 7 - Chat con frames
+
+Mejore la vista del chat utilizando streaming y server sent events descrito en la sección 2.9.3 para que:
+
+Usando frames, framesets iframes, tablas u otros mecanismos, haga que en un marco salgan los nicks de los usuarios conectados, 
+en otro la conversación y en un tercero el texto que se va a enviar.
+
+Sección 2.9.3: http://nereida.deioc.ull.es/~stw/perlexamples/node22.html#subsectionpractica:chat
