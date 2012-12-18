@@ -60,3 +60,7 @@ get '/users/:us' do
   settings.h.each_key { |k| users_connected << k.to_s }
   erb :users, locals: { u: users_connected }
 end
+
+get '/form/:us' do
+  erb :form, locals: { user: params[:us] }
+end

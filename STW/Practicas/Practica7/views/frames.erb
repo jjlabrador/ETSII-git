@@ -1,3 +1,9 @@
+<center>
+  <h2> 
+    <u> Super Simple Chat with Sinatra </u>
+  </h2>
+</center>
+
 <iframe 
   src="/chat_frames/<%= us %>"
   width="75%"
@@ -7,6 +13,7 @@
 </iframe>
 
 <iframe
+  class="content"
   src="/users/<%= us %>"
   width="*%"
   height="75%"
@@ -14,7 +21,10 @@
   scrolling="yes">
 </iframe>
 
-<form>
-   <input id='msg' placeholder='type message here...' />
-   <input type='submit' value='Enviar' />
-</form>
+<iframe
+  class="content"
+  src="/form/<%= us %>"
+  width="99%"
+  height="10%"
+  frameborder="1">
+</iframe>
