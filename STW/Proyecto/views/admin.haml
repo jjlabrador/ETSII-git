@@ -1,0 +1,32 @@
+.hero-unit
+  .row-fluid
+    #alert_placeholder2
+  .row-fluid
+    .span3
+      .hero-unit2
+        %center
+          %h3 #{us.name}   
+          %table
+            %tr
+              %td
+                %img.img-rounded.profile{:src => "#{us.image}", :alt => "imagen de perfil"}
+    .span9
+      .hero-unit2  
+        %h3 Administración
+        %h4
+          %i.icon-user
+          %a{:href => "/admin/users"}Gestión de usuarios
+        %h4
+          %i.icon-book
+          %a{:href => "/admin/subjects"}Gestión de asignaturas
+        %h4
+          %i.icon-file
+          %a{:href => "/admin/files"}Gestión de archivos
+        %h4
+          %i.icon-list-alt
+          %a{:href => "/bbdd/show_all"}Ver base de datos
+        %h4
+          %i.icon-refresh
+          %a{:href => "/bbdd/populate"}Restaurar base de datos
+        %br
+        %a.btn.btn-warning{:href => "/"} Regresar

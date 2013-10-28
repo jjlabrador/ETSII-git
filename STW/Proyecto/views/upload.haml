@@ -1,0 +1,7 @@
+.row-fluid
+  #alert_placeholder
+%form{:action => "/upload", :method => "post", :enctype => "multipart/form-data", :onSubmit=>"return valida_upload();"}
+  %input.btn{:type => "file", :name => "file"}
+  %input{:type => "hidden", :value => "#{id}", :name => "sub"}
+  %button.btn.btn-info{:type => "submit"} Compartir
+  %button.btn.btn-danger{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} Cancelar

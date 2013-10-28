@@ -1,0 +1,79 @@
+.hero-unit
+  .hero-unit2
+    %h3 Asignaturas
+    %h4 Grado en ingeniería Informática
+    #accordion2.accordion
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+            Primero
+        #collapseOne.accordion-body.collapse.in
+          .accordion-inner
+            %table.table.table-hover
+              %tbody
+                - sub.each do|s|
+                  - if s.course == 1
+                    %tr
+                      %td
+                        %a{:href => "/subjects/#{s.id}"} #{s.subjectname}
+                      %td
+                        - if us.subjects.member?(s)
+                          %a.btn.btn-danger{:href => "/unregister/#{s.id}"} Desmatricularse de esta asignatura
+                        - else
+                          %a.btn.btn-success{:href => "/register/#{s.id}"} Matricularse en esta asignatura
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+            Segundo
+        #collapseTwo.accordion-body.collapse
+          .accordion-inner
+            %table.table.table-hover
+              %tbody
+                - sub.each do|s|
+                  - if s.course == 2
+                    %tr
+                      %td
+                        %a{:href => "/subjects/#{s.id}"} #{s.subjectname}
+                      %td
+                        - if us.subjects.member?(s)
+                          %a.btn.btn-danger{:href => "/unregister/#{s.id}"} Desmatricularse de esta asignatura
+                        - else
+                          %a.btn.btn-success{:href => "/register/#{s.id}"} Matricularse en esta asignatura
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree"}
+            Tercero
+        #collapseThree.accordion-body.collapse
+          .accordion-inner
+            %table.table.table-hover
+              %tbody
+                - sub.each do|s|
+                  - if s.course == 3
+                    %tr
+                      %td
+                        %a{:href => "/subjects/#{s.id}"} #{s.subjectname}
+                      %td
+                        - if us.subjects.member?(s)
+                          %a.btn.btn-danger{:href => "/unregister/#{s.id}"} Desmatricularse de esta asignatura
+                        - else
+                          %a.btn.btn-success{:href => "/register/#{s.id}"} Matricularse en esta asignatura
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFour"}
+            Cuarto
+        #collapseFour.accordion-body.collapse
+          .accordion-inner
+            %table.table.table-hover
+              %tbody
+                - sub.each do|s|
+                  - if s.course == 4
+                    %tr
+                      %td
+                        %a{:href => "/subjects/#{s.id}"} #{s.subjectname}
+                      %td
+                        - if us.subjects.member?(s)
+                          %a.btn.btn-danger{:href => "/unregister/#{s.id}"} Desmatricularse de esta asignatura
+                        - else
+                          %a.btn.btn-success{:href => "/register/#{s.id}"} Matricularse en esta asignatura
+    %br
+    %a.btn.btn-warning{:href => "/profile"} Regresar

@@ -1,0 +1,14 @@
+.hero-unit
+  .hero-unit2
+    %h3 Resultados de la búsqueda
+  
+    - usu.each do |k| 
+      %ul
+        %h4
+          %img.img-rounded.profile{:src => "#{k.image}", :alt => "imagen de perfil de #{k.username}", :style => "width:30px; height: auto;"}
+          %a{:href => "/user/#{k.id}"} #{k.name} #{k.surnames} [#{k.username}]        
+      %br
+    - if usu.empty?
+      %h4 No se han encontrado resultados
+    %br
+    %a.btn.btn-warning{:href => "/"} Regresar

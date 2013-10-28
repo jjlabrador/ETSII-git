@@ -1,0 +1,34 @@
+.hero-unit  
+  %h3 BBDD
+  .hero-unit2{:style => "margin-bottom: 30px;"}  
+    %h4 Users
+    %table.table
+      - us.each do|u|
+        %tr
+          %td= u.name
+          %td= u.email
+          - u.subjects.each do |a|
+            %td= a.subjectname
+            %td= a.id
+  .hero-unit2{:style => "margin-bottom: 30px;"}
+    %h4 Subjects
+    %table.table
+      - sub.each do|s|
+        %tr
+          %td= s.subjectname
+          %td= s.course
+  .hero-unit2
+    %h4 Files
+    %table.table
+      - sub_f.each do|sf|
+        %tr
+          %td= sf.filename
+          %td= sf.date
+          %td= sf.size
+          %td= sf.uploader
+  %br
+  %br
+  %center
+    %a.btn.btn-warning{:href => "/admin/panel"} Regresar
+    %a.btn.btn-info{:href => "/"} Salir
+
