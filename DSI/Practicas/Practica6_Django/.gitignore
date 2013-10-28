@@ -1,0 +1,10 @@
+# Exclude Virtualenv artifacts from source control tracking:
+
+venv
+*.pyc
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py

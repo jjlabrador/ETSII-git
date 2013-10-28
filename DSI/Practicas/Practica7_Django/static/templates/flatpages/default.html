@@ -1,0 +1,17 @@
+{% load bootstrap_toolkit %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ flatpage.title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}custom.css">
+    {% bootstrap_stylesheet_tag %}
+    {% include "_shim.html" %}
+  </head>
+  <body>
+    {% include "_header.html" %}
+    <div class="container">
+      {{ flatpage.content }}
+      {% include "_footer.html" %}
+    </div>
+  </body>
+</html>
